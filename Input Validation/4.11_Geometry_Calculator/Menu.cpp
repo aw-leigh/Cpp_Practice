@@ -1,7 +1,9 @@
 /******************************************************************************
  * ** Author:      Andrew Wilson
  * ** Date:        Dec. 5 2018
- * ** Description  Implementation file for custom input validation functions
+ * ** Description  Implementation file for menu display and choice validation function
+                   displayMenu simply displays menu text on screen.
+                   validateMenuChoice ensures that the input is 1. an integer and 2. within the min and max range
  * ****************************************************************************/
 
 #include "Menu.hpp"
