@@ -12,7 +12,7 @@ int main()
 {
     int choice = 0;  //track menu choice
     double seconds = 0;
-    
+
     displayMenu();
     cin >> choice;
     validateMenuChoice(choice);  //ensures menu choice is valid

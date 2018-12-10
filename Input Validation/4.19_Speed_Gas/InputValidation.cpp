@@ -50,3 +50,31 @@ double validatePositiveDouble(double &choice)
         cin >> choice;
     }   
 }
+
+
+
+
+
+
+
+
+int validateNumber(int &number)
+{
+    while (!cin)
+    {
+        cout << "Please enter a number: ";
+        cin.clear();
+        cin.ignore(10000,'\n');
+        cin >> number;
+    } 
+}
+double validateNumber(double &number)
+{
+    while (!cin)
+    {
+        cout << "Please enter a number: ";
+        cin.clear();
+        cin.ignore(10000,'\n');
+        cin >> number;
+    } 
+}
