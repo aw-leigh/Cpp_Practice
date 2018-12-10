@@ -56,5 +56,4 @@ double validateDouble0to30(double &choice)  //ensures input is a double between 
         cin.ignore(10000,'\n');
         cin >> choice;
     }
-    return choice;    
 }

@@ -18,8 +18,7 @@ int validateInt(int &choice)
         cin.clear();
         cin.ignore(10000,'\n');
         cin >> choice;
-    }
-    return choice;    
+    } 
 }
 int validatePositiveInt(int &choice)
 {
@@ -29,8 +28,7 @@ int validatePositiveInt(int &choice)
         cin.clear();
         cin.ignore(10000,'\n');
         cin >> choice;
-    }
-    return choice;    
+    }  
 }
 double validateDouble(double &choice)
 {
@@ -41,7 +39,6 @@ double validateDouble(double &choice)
         cin.ignore(10000,'\n');
         cin >> choice;
     }
-    return choice;    
 }
 double validatePositiveDouble(double &choice)
 {
@@ -51,6 +48,5 @@ double validatePositiveDouble(double &choice)
         cin.clear();
         cin.ignore(10000,'\n');
         cin >> choice;
-    }
-    return choice;    
+    }   
 }

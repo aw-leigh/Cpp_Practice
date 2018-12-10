@@ -31,5 +31,4 @@ int validateMenuChoice(int &choice)
         cin.ignore(10000,'\n');
         cin >> choice;
     }
-    return choice;
 }
