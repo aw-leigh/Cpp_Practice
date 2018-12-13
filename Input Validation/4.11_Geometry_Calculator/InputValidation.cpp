@@ -10,7 +10,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-int validateInt(int &choice)
+void validateInt(int &choice)
 {
     while (!cin)
     {
@@ -18,10 +18,19 @@ int validateInt(int &choice)
         cin.clear();
         cin.ignore(10000,'\n');
         cin >> choice;
-    }
-    return choice;    
+    } 
 }
-double validateDouble(double &choice)
+void validateInt(int &choice, int min, int max)
+{
+    while (!cin || choice < min || choice > max)
+    {
+        cout << "Please enter an integer between " << min << " and " << max << ": ";
+        cin.clear();
+        cin.ignore(10000,'\n');
+        cin >> choice;
+    } 
+}
+void validateDouble(double &choice)
 {
     while (!cin)
     {
@@ -29,6 +38,15 @@ double validateDouble(double &choice)
         cin.clear();
         cin.ignore(10000,'\n');
         cin >> choice;
-    }
-    return choice;    
+    } 
+}
+void validateDouble(double &choice, double min, double max)
+{
+    while (!cin || choice < min || choice > max)
+    {
+        cout << "Please enter a decimal between " << min << " and " << max << ": ";
+        cin.clear();
+        cin.ignore(10000,'\n');
+        cin >> choice;
+    } 
 }

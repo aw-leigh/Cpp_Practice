@@ -6,5 +6,7 @@
 
 #include <iostream>
 
-int validateInt(int &choice);  //ensures that input is an integer
-double validateDouble(double &choice);  //ensures that input is a double                                  
+void validateInt(int &choice);  //ensures that input is an integer
+void validateInt(int &choice, int min, int max);  //ensures that input is an integer and between min and max
+void validateDouble(double &choice);  //ensures that input is a double                                  
+void validateDouble(double &choice, double min, double max);  //ensures that input is a double and between min and max        

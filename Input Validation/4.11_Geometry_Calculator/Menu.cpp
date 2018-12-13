@@ -21,7 +21,7 @@ void displayMenu()
     cout << " 4. Quit the program" << endl;
     cout << " Enter your choice: ";
 }
-int validateMenuChoice(int &choice)
+void validateMenuChoice(int &choice)
 {
     while (!cin || (choice < MINCHOICE) || (choice > MAXCHOICE))
     {
@@ -30,5 +30,4 @@ int validateMenuChoice(int &choice)
         cin.ignore(10000,'\n');
         cin >> choice;
     }
-    return choice;
 }
