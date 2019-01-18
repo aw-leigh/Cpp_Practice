@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 #include "validation.hpp"
 
 void validateInt(int &input)
 {
-	while (!std::cin || std::cin.peek() == '.' || std::cin.peek() == ' ')
+	while (!std::cin || std::cin.peek() == '.' || std::cin.peek() == ' ' || std::isalpha(std::cin.peek()))
 	{
 		std::cin.clear();  //Clear bad input flag
 		std::cin.ignore(1000, '\n');  //Discard input
@@ -14,7 +15,8 @@ void validateInt(int &input)
 }
 void validateRangedInt(int &input, int min, int max)
 {
-   	while (!std::cin || std::cin.peek() == '.' || std::cin.peek() == ' ' || input < min || input > max)
+   	while (!std::cin || std::cin.peek() == '.' || std::cin.peek() == ' ' || 
+	   		std::isalpha(std::cin.peek()) || input < min || input > max)
 	{
 		std::cin.clear();  //Clear bad input flag
 		std::cin.ignore(1000, '\n');  //Discard input
@@ -44,7 +46,8 @@ void validateRangedDouble(double &input, double min, double max)
 }
 void validateMenuChoice(int &menuChoice, int menuLength)  //assumes menu choices start at 1
 {
-	while (!std::cin || std::cin.peek() == '.' || menuChoice < 1 || menuChoice > menuLength)
+	while (!std::cin || std::cin.peek() == '.' || std::cin.peek() == ' ' || 
+			std::isalpha(std::cin.peek()) || menuChoice < 1 || menuChoice > menuLength)
 	{
 		std::cin.clear();
 		std::cin.ignore(1000, '\n');
